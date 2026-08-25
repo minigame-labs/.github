@@ -1,15 +1,13 @@
 ## Minigame Labs
 
+[English](README.md) | [中文](README.zh-CN.md)
+
 We build **Migo** — an embeddable native runtime for Canvas / WebGL mini-games.
 
 Embed it in your app and HTML5 or mini-game content runs natively: one engine you
 pin yourself, instead of a system WebView that drifts across OEMs and OS updates.
 It is a **game container, not a browser** — there is no DOM, no CSS and no layout
 engine, and content that needs those is not what it is for.
-
-我们做的是 **Migo** —— 面向 Canvas / WebGL 小游戏的嵌入式原生运行时。嵌进你的 App，
-HTML5 与小游戏内容即可原生运行：版本由你自己钉死，而不是随 OEM 与系统更新漂移的系统
-WebView。它是**游戏容器，不是浏览器**——没有 DOM、没有 CSS、没有布局引擎。
 
 ### What we publish
 
@@ -50,4 +48,4 @@ device. Your content never leaves your machine.
 
 ---
 
-Source-available under BSL 1.1 — read it, build it, audit it. 源码可得、可自行构建与审计。
+Source-available under BSL 1.1 — read it, build it, audit it.

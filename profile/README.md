@@ -32,7 +32,7 @@ interleaved and temperature-gated:
 
 - **Memory: 49–62% lower.** WebView is counted fairly, including its separate
   renderer process.
-- **CPU: 2.5–3.0× lower.**
+- **CPU: 2.4–3.0× lower.**
 - **Frame rate: a tie.** 60 fps median on both sides. Both run V8, so we do not
   claim faster JavaScript and never will.
 - **Startup: faster on five of six measures**, and one of those five is inside the

@@ -28,13 +28,14 @@ one, or both.
 Measured on Android against the system WebView, three real games, one session,
 interleaved and temperature-gated:
 
-- **Memory: 44–54% lower.** WebView is counted fairly, including its separate
+- **Memory: 47–58% lower.** WebView is counted fairly, including its separate
   renderer process.
-- **CPU: 2.4–3.0× lower.**
+- **CPU: 2.3–3.0× lower**, and 3.9–4.7× fewer CPU cycles counted core cluster by core cluster.
 - **Frame rate: a tie.** 60 fps median on both sides. Both run V8, so we do not
   claim faster JavaScript and never will.
-- **Startup: faster on five of six measures**, and one of those five is inside the
-  harness noise floor — which the benchmark says out loud rather than rounding up.
+- **Startup: first frame clearly faster on two of the three games, game-ready on one.**
+  The other three readings are inside the harness's noise floor — which the benchmark
+  says out loud rather than rounding them up.
 
 Every figure above is Android. Performance on OpenHarmony NEXT is a separate
 question with a separate answer, and it is written down rather than implied.

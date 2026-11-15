@@ -12,7 +12,7 @@
 
 | | |
 |---|---|
-| **[migo](https://github.com/minigame-labs/migo)** | 运行时本体。Rust 核心、V8、Skia。Android · Linux · Windows · OpenHarmony，x86_64 与 arm64，全部由 CI 构建并附 attestation。 |
+| **[migo-runtime](https://github.com/minigame-labs/migo-runtime)** | 运行时的发布仓库。Rust 核心、V8、Skia。Android · iOS · macOS · Linux · Windows · OpenHarmony 的 SDK 包，x86_64 与 arm64，由 CI 构建，附校验和与 SBOM 发布。 |
 | **[migo-bench](https://github.com/minigame-labs/migo-bench)** | Migo 对比系统 WebView：同一游戏、同一设备、同一场次。原始行与测量方法都在仓库里。 |
 | **[migo-examples](https://github.com/minigame-labs/migo-examples)** | 宿主集成示例。 |
 | **[migo-web-adapter](https://github.com/minigame-labs/migo-web-adapter)** | 为假定浏览器环境的引擎（Cocos、Egret、Laya、Pixi）提供浏览器式 BOM/DOM 表面。 |
@@ -25,7 +25,7 @@
 
 Android 上对比系统 WebView，三款真实游戏，同一场次，交错测量、逐格温控：
 
-- **内存：少 49–62%。** WebView 按公平口径计算，含它独立的渲染进程。
+- **内存：少 44–54%。** WebView 按公平口径计算，含它独立的渲染进程。
 - **CPU：低 2.4–3.0×。**
 - **帧率：打平。** 两侧中位数都是 60 fps。两边都跑 V8，所以我们不声称 JavaScript 更快，
   以后也不会。
@@ -35,12 +35,15 @@ Android 上对比系统 WebView，三款真实游戏，同一场次，交错测�
 以上每一个数字都是 Android。OpenHarmony NEXT 上的性能是另一个问题、另一个答案，
 它被写下来了，而不是靠暗示。
 
-### 核你自己的内容
+### 试用
 
-别信我们，也别把包发给我们。**[PRESCREEN.md](https://github.com/minigame-labs/migo/blob/master/PRESCREEN.md)**
-就是我们会跑的那个工具，交给你自己跑：它报告一个包需要哪些 API、对照某个构建实际发布了
-什么，以及它在真机上是否出画面。你的内容不离开你的机器。
+从[发布页](https://github.com/minigame-labs/migo-runtime/releases)取一个 SDK 包，用它的
+`SHA256SUMS.txt` 校验，再从 [migo-examples](https://github.com/minigame-labs/migo-examples)
+里的宿主示例起步。各平台的接入见[开发者文档](https://minigame-labs.com/docs/)。
 
 ---
 
-BSL 1.1，源码可得——可阅读、可自行构建、可审计。
+以 [Migo Binary License 1.0](https://github.com/minigame-labs/migo-runtime/blob/master/LICENSE) 发布：
+开发、测试与评估不限规模、免费；年收入不超过 100 万美元、月活不超过 300 万时，可免费嵌入
+自己的 App 上线。v0.9.19 及更早的版本仍适用发布时的 BSL 1.1。
+许可洽谈：[licensing@minigame-labs.com](mailto:licensing@minigame-labs.com)。

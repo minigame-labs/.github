@@ -23,6 +23,12 @@ The engine installs exactly one capability surface, `migo.*`, and carries no ada
 code. Everything else content expects is a separate, composable package — take zero,
 one, or both.
 
+`migo.*` follows the mini-game platform's API: every API its documentation lists has an
+answer on Android, iOS and macOS, and Linux and Windows lack only a few hardware APIs
+(OpenHarmony covers far fewer for now). Each API on each platform, and whether the
+conformance suite verified it there, is in
+[API platform support](https://minigame-labs.com/docs/en/capabilities/api-support/).
+
 ### What the numbers say, including where they don't
 
 Measured on Android against the system WebView, three real games, one session,

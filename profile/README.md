@@ -28,14 +28,20 @@ one, or both.
 Measured on Android against the system WebView, three real games, one session,
 interleaved and temperature-gated:
 
-- **Memory: 47–58% lower.** WebView is counted fairly, including its separate
+- **Memory: 45–56% lower.** WebView is counted fairly, including its separate
   renderer process.
-- **CPU: 2.3–3.0× lower**, and 3.9–4.7× fewer CPU cycles counted core cluster by core cluster.
+- **CPU: 2.4–2.9× lower**, and 3.5–4.7× fewer CPU cycles counted core cluster by core cluster.
 - **Frame rate: a tie.** 60 fps median on both sides. Both run V8, so we do not
   claim faster JavaScript and never will.
-- **Startup: first frame clearly faster on two of the three games, game-ready on one.**
-  The other three readings are inside the harness's noise floor — which the benchmark
-  says out loud rather than rounding them up.
+- **Startup: first frame clearly faster on all three games, game-ready on one.**
+  The other two readings are not quoted — one is inside the harness's noise floor, the
+  other is a measurement the harness has never resolved — and the benchmark says so out
+  loud rather than rounding them up.
+
+These are the 2026-11-19 figures. The ones published before them (47–58% less memory)
+were measured with a hardware layer our own WebView test app put on the WebView, which an
+ordinary app does not have; it cost the WebView about 24 MB per game. The benchmark
+records the finding and the re-measurement ([RESULTS §9.4](https://github.com/minigame-labs/migo-bench/blob/main/RESULTS.en.md)).
 
 Every figure above is Android. Performance on OpenHarmony NEXT is a separate
 question with a separate answer, and it is written down rather than implied.

@@ -21,6 +21,10 @@
 引擎只安装一个能力表面 `migo.*`，本身不含任何 adapter 代码。内容期待的其余一切都是独立、
 可组合的包——按需选零个、一个或两个。
 
+`migo.*` 对齐小游戏平台的 API：平台文档列出的每个 API，在 Android、iOS、macOS 上都有答案，
+Linux 与 Windows 只差少数几个硬件类接口（OpenHarmony 目前覆盖得少得多）。每个 API 在每个平台上的情况、
+是否经一致性测试验证，见 [API 平台支持](https://minigame-labs.com/docs/capabilities/api-support/)。
+
 ### 数字，连同它们不成立的地方
 
 Android 上对比系统 WebView，三款真实游戏，同一场次，交错测量、逐格温控：

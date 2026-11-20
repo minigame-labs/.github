@@ -15,7 +15,7 @@
 | **[migo-runtime](https://github.com/minigame-labs/migo-runtime)** | 运行时的发布仓库。Rust 核心、V8、Skia。Android · iOS · macOS · Linux · Windows · OpenHarmony 的 SDK 包，x86_64 与 arm64，由 CI 构建，附校验和与 SBOM 发布。 |
 | **[migo-bench](https://github.com/minigame-labs/migo-bench)** | Migo 对比系统 WebView：同一游戏、同一设备、同一场次。原始行与测量方法都在仓库里。 |
 | **[migo-examples](https://github.com/minigame-labs/migo-examples)** | 宿主集成示例。 |
-| **[migo-web-adapter](https://github.com/minigame-labs/migo-web-adapter)** | 为假定浏览器环境的引擎（Cocos、Egret、Laya、Pixi）提供浏览器式 BOM/DOM 表面。 |
+| **[migo-web-adapter](https://github.com/minigame-labs/migo-web-adapter)** | 为假定浏览器环境的引擎提供浏览器式 BOM/DOM 表面。Pixi、Phaser、three.js、Babylon.js、PlayCanvas、Egret 不改一行即可在其上运行；Cocos Creator 与 Laya 尚未验证，不作声明。 |
 | **[migo-wx-adapter](https://github.com/minigame-labs/migo-wx-adapter)** | 发布小游戏形状的全局对象，别名到运行时自己的能力上。 |
 
 引擎只安装一个能力表面 `migo.*`，本身不含任何 adapter 代码。内容期待的其余一切都是独立、
@@ -24,6 +24,10 @@
 `migo.*` 对齐小游戏平台的 API：平台文档列出的每个 API，在 Android、iOS、macOS 上都有答案，
 Linux 与 Windows 只差少数几个硬件类接口（OpenHarmony 目前覆盖得少得多）。每个 API 在每个平台上的情况、
 是否经一致性测试验证，见 [API 平台支持](https://minigame-labs.com/docs/capabilities/api-support/)。
+
+不只是测试场景：两款完整的开源游戏——PixiJS 的
+[Bubbo Bubbo 与 Puzzling Potions](https://github.com/pixijs/open-games)——不改一行、用它们自己的工具链构建，
+经 web adapter 在 Linux 上无未捕获错误地进到标题页，网页字体、Spine 动画和声音都在内。
 
 ### 数字，连同它们不成立的地方
 

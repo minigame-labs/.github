@@ -31,7 +31,7 @@ PixiJS 的 [Bubbo Bubbo 与 Puzzling Potions](https://github.com/pixijs/open-gam
 [Dodge the Creeps](https://github.com/godotengine/godot-demo-projects/tree/master/2d/dodge_the_creeps)
 由 Godot 4.7 导出——40 MB WebAssembly、WebGL 2、音频走 AudioWorklet——同样经 web adapter；
 three.js 自带的第一人称示例游戏（games_fps：glTF 关卡、八叉树碰撞、阴影），经 web adapter；
-还有为一致性套件用 Cocos Creator 3.8 编写、由编辑器构建到小游戏目标的关卡，经小游戏 adapter。
+还有为一致性套件用 Cocos Creator 3.8 编写、由编辑器构建到小游戏目标的两个关卡（其中一个用 WebAssembly 版 Box2D、粒子和音效），经小游戏 adapter。
 
 ### 数字，连同它们不成立的地方
 

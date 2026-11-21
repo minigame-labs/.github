@@ -36,8 +36,8 @@ Spine animation and sound included; Godot's
 [Dodge the Creeps](https://github.com/godotengine/godot-demo-projects/tree/master/2d/dodge_the_creeps), exported
 by Godot 4.7 -- 40 MB of WebAssembly, WebGL 2, its audio through AudioWorklet -- through the web adapter too;
 three.js's first-person example game (games_fps: a glTF level, octree collisions, shadows), through the web adapter; and
-a level written for the conformance suite in Cocos Creator 3.8, built by the editor to its mini-game target,
-through the mini-game adapter.
+two levels written for the conformance suite in Cocos Creator 3.8 -- one with Box2D as WebAssembly, particles and
+sound -- built by the editor to its mini-game target, through the mini-game adapter.
 
 ### What the numbers say, including where they don't
 

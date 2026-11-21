@@ -16,8 +16,8 @@ engine, and content that needs those is not what it is for.
 | **[migo-runtime](https://github.com/minigame-labs/migo-runtime)** | The runtime's releases. Rust core, V8, Skia. SDK packages for Android · iOS · macOS · Linux · Windows · OpenHarmony, x86_64 and arm64, built in CI and published with checksums and SBOMs. |
 | **[migo-bench](https://github.com/minigame-labs/migo-bench)** | Migo vs the system WebView, same game, same device, same session. Raw rows and the method are in the repo. |
 | **[migo-examples](https://github.com/minigame-labs/migo-examples)** | Host integration examples. |
-| **[migo-web-adapter](https://github.com/minigame-labs/migo-web-adapter)** | A browser-style BOM/DOM surface for engines that assume one. Pixi, Phaser, three.js, Babylon.js, PlayCanvas and Egret run on it unmodified; Cocos Creator and Laya are not verified yet, so they are not claimed. |
-| **[migo-wx-adapter](https://github.com/minigame-labs/migo-wx-adapter)** | Publishes a mini-game-shaped global, aliased onto the runtime's own capabilities. |
+| **[migo-web-adapter](https://github.com/minigame-labs/migo-web-adapter)** | A browser-style BOM/DOM surface for engines that assume one. Pixi, Phaser, three.js, Babylon.js, PlayCanvas and Egret run on it unmodified, and so does a Godot 4 web export -- WebAssembly, WebGL 2 and AudioWorklet. Cocos Creator's web build and Laya are not verified yet, so they are not claimed. |
+| **[migo-wx-adapter](https://github.com/minigame-labs/migo-wx-adapter)** | Publishes a mini-game-shaped global, aliased onto the runtime's own capabilities. Cocos Creator's mini-game build runs on it. |
 
 The engine installs exactly one capability surface, `migo.*`, and carries no adapter
 code. Everything else content expects is a separate, composable package — take zero,
@@ -29,10 +29,14 @@ answer on Android, iOS and macOS, and Linux and Windows lack only a few hardware
 conformance suite verified it there, is in
 [API platform support](https://minigame-labs.com/docs/en/capabilities/api-support/).
 
-Not only test scenes: two whole open-source games, PixiJS's
-[Bubbo Bubbo and Puzzling Potions](https://github.com/pixijs/open-games), built unmodified by their
-own toolchains, run through the web adapter to their title screens on Linux with no uncaught error --
-web fonts, Spine animation and sound included.
+Not only test scenes: whole games, built unmodified by their own toolchains, reach their title screens
+on Linux with no uncaught error. PixiJS's
+[Bubbo Bubbo and Puzzling Potions](https://github.com/pixijs/open-games) through the web adapter, web fonts,
+Spine animation and sound included; Godot's
+[Dodge the Creeps](https://github.com/godotengine/godot-demo-projects/tree/master/2d/dodge_the_creeps), exported
+by Godot 4.7 -- 40 MB of WebAssembly, WebGL 2, its audio through AudioWorklet -- through the web adapter too; and
+a level written for the conformance suite in Cocos Creator 3.8, built by the editor to its mini-game target,
+through the mini-game adapter.
 
 ### What the numbers say, including where they don't
 

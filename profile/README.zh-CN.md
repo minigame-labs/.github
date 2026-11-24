@@ -15,8 +15,8 @@
 | **[migo-runtime](https://github.com/minigame-labs/migo-runtime)** | 运行时的发布仓库。Rust 核心、V8、Skia。Android · iOS · macOS · Linux · Windows · OpenHarmony 的 SDK 包，x86_64 与 arm64，由 CI 构建，附校验和与 SBOM 发布。 |
 | **[migo-bench](https://github.com/minigame-labs/migo-bench)** | Migo 对比系统 WebView：同一游戏、同一设备、同一场次。原始行与测量方法都在仓库里。 |
 | **[migo-examples](https://github.com/minigame-labs/migo-examples)** | 宿主集成示例。 |
-| **[migo-web-adapter](https://github.com/minigame-labs/migo-web-adapter)** | 为假定浏览器环境的引擎提供浏览器式 BOM/DOM 表面。Pixi、Phaser、three.js、Babylon.js、PlayCanvas、Egret 不改一行即可在其上运行，Godot 4 的 Web 导出（WebAssembly、WebGL 2、AudioWorklet）也一样；Cocos Creator 的 Web 构建与 Laya 尚未验证，不作声明。 |
-| **[migo-wx-adapter](https://github.com/minigame-labs/migo-wx-adapter)** | 发布小游戏形状的全局对象，别名到运行时自己的能力上。Cocos Creator 的小游戏构建在其上运行。 |
+| **[migo-web-adapter](https://github.com/minigame-labs/migo-web-adapter)** | 为假定浏览器环境的引擎提供浏览器式 BOM/DOM 表面。Pixi、Phaser、three.js、Babylon.js、PlayCanvas、Egret 不改一行即可在其上运行，Godot 4 的 Web 导出（WebAssembly、WebGL 2、AudioWorklet）和 Defold 1.14 的 HTML5 包也一样；Cocos Creator 的 Web 构建尚未验证，不作声明。 |
+| **[migo-wx-adapter](https://github.com/minigame-labs/migo-wx-adapter)** | 发布小游戏形状的全局对象，别名到运行时自己的能力上。Cocos Creator 与 LayaAir 的小游戏构建在其上运行。 |
 
 引擎只安装一个能力表面 `migo.*`，本身不含任何 adapter 代码。内容期待的其余一切都是独立、
 可组合的包——按需选零个、一个或两个。
@@ -31,7 +31,9 @@ PixiJS 的 [Bubbo Bubbo 与 Puzzling Potions](https://github.com/pixijs/open-gam
 [Dodge the Creeps](https://github.com/godotengine/godot-demo-projects/tree/master/2d/dodge_the_creeps)
 由 Godot 4.7 导出——40 MB WebAssembly、WebGL 2、音频走 AudioWorklet——同样经 web adapter；
 three.js 自带的第一人称示例游戏（games_fps：glTF 关卡、八叉树碰撞、阴影），经 web adapter；
-还有为一致性套件用 Cocos Creator 3.8 编写、由编辑器构建到小游戏目标的两个关卡（其中一个用 WebAssembly 版 Box2D、粒子和音效），经小游戏 adapter。
+还有为一致性套件用 Cocos Creator 3.8 编写、由编辑器构建到小游戏目标的两个关卡（其中一个用 WebAssembly 版 Box2D、粒子和音效），经小游戏 adapter；
+由 LayaAir 自己的构建工具构建到小游戏目标的 LayaAir 3.4.3 关卡（WebAssembly 版 Box2D、音效），经小游戏 adapter；
+以及由 Defold 自己的构建工具打包为 HTML5 的 Defold 1.14.1 关卡（Box2D、GUI、音效），经 web adapter。
 
 ### 数字，连同它们不成立的地方
 
